@@ -2,7 +2,7 @@ package functions
 
 /*
 +---------------------------------------------
-| Function | Context Object | Retunpm --versionrn Value   |
+| Function | Context Object | Return Value   |
 ----------------------------------------------
 | let      | it             | lambda result  |
 +---------------------------------------------
