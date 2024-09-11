@@ -1,5 +1,7 @@
+package telusko
+
 fun main(){
-    var obj = Laptop()
+    val obj = Laptop()
     obj.purpose()
     obj.domain()
 }
@@ -12,7 +14,7 @@ abstract class Electronics{ //when you make a class of function abstract then th
     }
 }
 
-class Laptop :Electronics(){
+class Laptop : Electronics(){
     override fun purpose(){
         println("Computational Tasks")
     }

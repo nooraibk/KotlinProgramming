@@ -1,4 +1,4 @@
-package OOP
+package oop
 
 fun main() {
     val user = User() //this step is called instantiation
