@@ -6,9 +6,10 @@ fun main() {
     println("Name = ${user.name}")
     println("Age = ${user.age}")
 
-    val car = Vehicle(2, "motor cycle")
+    val car = College(2, "motor cycle")
+    //car.numberOfTyres //numberOfTyres is a local immutable property of the class and is not accessible outside the class scope
     println("Type of Vehicle = ${car.type}")
-    println("Number of Tyres = ${car.numberOfTyres}")
+    println("Number of Tyres = ${car.pubNumberOfStudents}")
 
     val initExample = InitExample("   ", 30)
 }
@@ -18,8 +19,8 @@ class User{
     var name = "henry"
 }
 
-class Vehicle(numberOfTyres: Int, type: String){
-    var numberOfTyres = numberOfTyres
+class College(numberOfStudents: Int, type: String){ //numberOfTyres and type are constructor params
+    var pubNumberOfStudents = numberOfStudents
     var type = type
 }
 
@@ -42,5 +43,90 @@ class InitExample(name: String = "No Name", var age: Int){
         }
 
         println(" Name = ${this.name}")
+    }
+}
+
+//------------------------SUPER KEY WORD------------------------------------------
+
+
+
+/**
+ * Super keywords can be used to invoke the members of the parent class in the child class.
+ * In the example below, the child class invokes drive() and noOfSeats properties using the super keyword.
+ * */
+
+
+open class Vehicle(name: String, modelNumber: String, color: String) {
+    val numberOfSeat = 3
+
+    open fun drive() {
+        println("Let's drive a vehicle")
+    }
+}
+
+class Car(val name: String, val modelNumber: String, val color: String) : Vehicle(name, modelNumber, color) {
+
+    override fun drive() {
+        super.drive()
+    }
+
+    fun visitPlaces() {
+        println("Let's visit places in our new car. We have ${super.numberOfSeat} seats")
+    }
+}
+
+
+/**
+ * Super keyword can also be used to invoke the constructor of the parent class from the secondary constructors of the child class.
+ */
+
+open class VehicleTwo(name: String, modelNumber: String, color: String) {
+    val numberOfSeat = 3
+
+    open fun drive() {
+        println("Let's drive a vehicle")
+    }
+}
+
+class CarTwo : VehicleTwo {
+
+    constructor(name: String, modelNumber: String, color: String) : super(name, modelNumber, color)
+
+    override fun drive() {
+        super.drive()
+    }
+
+    fun visitPlaces() {
+        println("Let's visit places in our new car. We have ${super.numberOfSeat} seats")
+    }
+}
+
+/**
+ * It can also be used to resolve the overriding conflicts.
+ * When we inherit from the two parent classes, which consist of methods with the same name, then we must specify which superclass’s implementation that we want to use using the super keyword.
+ */
+
+open class VehicleThree(name: String, modelNumber: String, color: String) {
+
+    open val numberOfSeat = 4
+    open fun drive() {
+        println("Let's drive a vehicle")
+    }
+}
+
+interface Instrument {
+    fun drive()
+}
+
+class CarThree(val name: String, val modelNumber: String, val color: String) : VehicleThree(name, modelNumber, color),
+    Instrument {
+
+    override fun drive() {
+        super<VehicleThree>.drive()
+        println("Let's drive $name $modelNumber car of $color color")
+    }
+
+    fun visitPlaces() {
+        println("Let's visit places in our new car. We have ${super.numberOfSeat} seats")
     }
 }

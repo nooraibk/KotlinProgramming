@@ -18,6 +18,8 @@ fun main(){
 
 
     SecondInitClass() //by just calling the class with its primary constructor will run the init block
+
+    InitOrderDemo("JOHN")
 }
 
 class UserClass{
@@ -70,3 +72,19 @@ class SecondInitClass{
         println("Simple Second Init Class")
     }
 }
+
+class InitOrderDemo(name: String) {
+    val firstProperty = "First property: $name".also(::println)
+
+    init {
+        println("First initializer block that prints $name")
+    }
+
+    val secondProperty = "Second property: ${name.length}".also(::println)
+
+    init {
+        println("Second initializer block that prints ${name.length}")
+    }
+}
+
+//During the initialization of an instance, the initializer blocks are executed in the same order as they appear in the class body, interleaved with the property initializers:
