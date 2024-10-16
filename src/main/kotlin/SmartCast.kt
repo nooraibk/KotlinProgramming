@@ -1,6 +1,3 @@
-package oop
-
-
 /**
 ### Limitations
 
@@ -67,16 +64,19 @@ fun describe(obj: Any) {
     }
 }
 
+// later
+//https://www.perplexity.ai/search/there-are-two-implementations-oVz2gnYyROiDeEL_eUvJeA
+
+
 fun main() {
     handleAnimal(1)
-
 
     var x: String? = "Hello"
     if (x != null) {
         println(x.length) // This works
         println(x.uppercase()) // This also works
         x = null
-        println(x.length) // Error: x is nullable and is not checked for null
+        println(x?.length) // Error: x is nullable and is not checked for null
     }
 
 }

@@ -14,14 +14,13 @@ open class BClass
 
 /////////////////////////////////
 
-interface InheritsNothing{
+interface InheritsNothing /*: BClass*/{ // interface cannot inherit from a class
     fun nothingFun()
 }
 
 interface InterfaceX
 
-// interface cannot inherit from a class
-// its optional for InheritsACLass to implement InheritsNothing's nothingFun() function as it is an interface. however if it does implement InheritsNothing's nothingFun() function then class/function inheritting InheritsACLass have the option to implement InheritsNothing's nothingFun() as InheritsACLass provided a default implementation InheritsACLass
+// it is optional for InheritsACLass to implement InheritsNothing's nothingFun() function as it is an interface. however if it does implement InheritsNothing's nothingFun() function then class/function inheritting InheritsACLass have the option to implement InheritsNothing's nothingFun() as InheritsACLass provided a default implementation InheritsACLass
 interface InheritsACLass : /*AClass,*/ InheritsNothing{
     override fun nothingFun() {
         println("this is the default implementation of nothingFun() and the class/interface that will inherit InheritsACLass have the option to override or leave it to its default implementation")

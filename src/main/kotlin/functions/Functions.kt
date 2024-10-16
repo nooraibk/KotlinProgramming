@@ -10,9 +10,9 @@ fun main(){
 
 //in kotlin, we have Unit datatype that replace void from java. but unlike java where void means no return type, Unit is actually a datatype but a datatype that contains nothing.
 
-/**considering the single expression function, you can also write the telusko.main function that only has one statement, as follows.
+/**considering the single expression function, you can also write the telusko.codinginflow.functions.telusko.datastructures.functions.telusko.main function that only has one statement, as follows.
 
-fun telusko.main() = println("hello world")*/
+fun telusko.codinginflow.functions.telusko.datastructures.functions.telusko.main() = println("hello world")*/
 
 /**until parenthesis,function part is called header & the curly brackets part of the function is called body. The defined variables inside parenthesis are "val" not "var" and are called parameters (which are placeholders) whereas where you call the function and pass the values for the parameters, are called arguments. for instance, name and mNumber are parameters and val variables whereas Henry and 3 are arguments*/
 

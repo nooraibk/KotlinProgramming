@@ -1,6 +1,8 @@
+package functions
+
 fun main(){
-    //show()
-    //fact()
+    //functions.show()
+    //functions.fact()
     println(recursiveFact(5))
 }
 

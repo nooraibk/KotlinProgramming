@@ -1,4 +1,4 @@
-package test
+package di
 
 fun main(){
     val obj = BillingClass()

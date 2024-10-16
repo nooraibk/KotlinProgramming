@@ -21,7 +21,7 @@ object B: inter{
 
     val p = 20
     fun test(){
-        println("Hello from Object B")
+        println("Hello from Object telusko.B")
     }
 
     override val A: Int

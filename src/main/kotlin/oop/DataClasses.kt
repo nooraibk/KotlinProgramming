@@ -26,9 +26,13 @@ fun main(){
 data class DataClasses(
     val name: String,
     val age: Int
-)
+){
+    /*constructor(
+        val xyx : String
+    ) : this()*/
+}
 
-/**The compiler automatically derives the following members from all properties declared in the primary constructor:
+/**The compiler automatically derives the following member functions from all properties declared in the primary constructor:
  * (these are also the functions that are usually required by every model class)
  *
  * equals()/hashCode() pair

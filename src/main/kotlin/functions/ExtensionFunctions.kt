@@ -17,9 +17,13 @@ fun main(){
 }
 
 
-/**in kotlin you can extend a class unless it is open so adding further functions and variables in a class becomes challenging.
+/**my old explanation::
+ * in kotlin you cannot extend a class unless it is open so adding further functions and variables in a class becomes challenging.
  * by using extension functions you can assign a function to any predefined class reference before function name while defining the header of the function.
- *these functions will be associated to the class they are extending to. Like String extended function can only be called from string object. Int extended function can only be called from Int object
+ *these functions will be associated to the class they are extending to. Like String extended function can only be called from string object. Int extended function can only be called from Int object.
+ *
+ * *new explanation*::
+ * adding function to an existing class without modifying it
 */
 fun String.formattedString(): String{
     return "-------------\n$this"

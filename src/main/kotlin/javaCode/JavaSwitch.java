@@ -1,12 +1,14 @@
-package codinginflow;public class TestClass {
+package javaCode;
+
+public class JavaSwitch {
     public static void main(String[] arg){
 //        System.out.println("hello, World!");
 
-//        String[] A = {"hello", "world"};
-//        String[] B = A;
+//        String[] telusko.A = {"hello", "world"};
+//        String[] telusko.B = telusko.A;
 //
 //
-//        System.out.println("Array A = " + A[0]);
+//        System.out.println("Array telusko.A = " + telusko.A[0]);
 
 
         char grade = 'C';

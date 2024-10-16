@@ -1,11 +1,11 @@
-package OOP
+package oop
 
 fun main(){
     val obj2 = InterfaceClass()
     val obj3 = ImplementationClass()
     val obj4 : InterfaceClass.MInterface
 
-    obj2.callInterfaceFunction()
+    obj2.callInterfaceFunction() //compile time error because lateinit var obj1 inside InterfaceClass class is not been initialized. uncommenting line 16 does compile it
 }
 
 
@@ -13,6 +13,7 @@ fun main(){
 class InterfaceClass{
 
     lateinit var obj1 : MInterface
+//    var obj1 : MInterface = ImplementationClass()
 
 
 
@@ -28,9 +29,9 @@ class InterfaceClass{
     }
 }
 
-class ImplementationClass : InterfaceClass.MInterface{
+class ImplementationClass : InterfaceClass.MInterface {
     override fun interfaceFunction(text: String) {
-        println()
+        println("ImplementationClass:: override fun interfaceFunction")
     }
 }
 

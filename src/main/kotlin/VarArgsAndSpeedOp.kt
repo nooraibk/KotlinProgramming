@@ -10,6 +10,9 @@ fun main(){
     val numbers = intArrayOf(4, 5)
     varargArray(*numbers)
 
+    //arrayOf()
+    // if you just type arrayOf and wait for autocomplete, it will give you vararg as first argument.
+
     //The “*” behind the numbers array variable is the spread operator
 
 }
