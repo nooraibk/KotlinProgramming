@@ -76,7 +76,7 @@ fun main() {
         println(x.length) // This works
         println(x.uppercase()) // This also works
         x = null
-        println(x?.length) // Error: x is nullable and is not checked for null
+        println(x.length) // Error: x is nullable and is not checked for null
     }
 
 }
