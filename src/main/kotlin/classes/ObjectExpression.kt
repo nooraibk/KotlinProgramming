@@ -1,4 +1,4 @@
-package oop
+package classes
 
 fun main(){
 
@@ -16,7 +16,7 @@ fun main(){
 
     //object expression can also be used to implement interfaces anonymously
 
-    val obj1 = object: cloneable{
+    val obj1 = object: cloneable {
         override fun clone() {
             println("this function is cloned")
         }

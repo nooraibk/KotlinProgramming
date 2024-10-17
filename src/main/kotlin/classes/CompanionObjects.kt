@@ -1,4 +1,4 @@
-package oop
+package classes
 
 /**
  * If you are familiar with Java, you may relate companion objects with static methods (even though how they work internally is totally different).

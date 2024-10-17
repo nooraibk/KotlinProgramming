@@ -1,3 +1,5 @@
+package classes
+
 fun main(){
     var obj = School("High School") //the primary constructor of School class will accept the arguments
     obj.job()

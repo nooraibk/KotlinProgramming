@@ -16,7 +16,7 @@ var attempt = 1.1
 
 fun main(){
 
-    print("Variable = $text & This is my $attempt attempt. I'll be going to do it ${attempt+1} or ${attempt+2} more times")
+    print("Variable = $text & This is my $attempt attempt. dsl.I'll be going to do it ${attempt+1} or ${attempt+2} more times")
     //to print "$" in the print or println function add "\" character before the "$" sign
 
 }

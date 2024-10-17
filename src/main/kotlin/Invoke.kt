@@ -19,6 +19,10 @@ fun main(){
     greeter.invoke("World")
     greeter.invoke()
     //invoke keyword is optional here, hence returning the same output
+
+    val zObj = ZZZZ("abc value")
+    zObj.invoke("invoke param value")
+    println(zObj.abc)
 }
 
 //this is how normally we call a function in any class
@@ -39,5 +43,12 @@ class Greeter(val greeting: String) {
 
     operator fun invoke(name: String) {
         println("$greeting $name")
+    }
+}
+
+
+class ZZZZ(var abc: String){
+    operator fun invoke(invokeParam : String){
+        abc = "Class Member \"abc\" value is $abc and \"invoke\" param value is $invokeParam"
     }
 }

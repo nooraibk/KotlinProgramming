@@ -4,11 +4,11 @@ public class JavaSwitch {
     public static void main(String[] arg){
 //        System.out.println("hello, World!");
 
-//        String[] telusko.A = {"hello", "world"};
-//        String[] telusko.B = telusko.A;
+//        String[] telusko.dsl.A = {"hello", "world"};
+//        String[] telusko.dsl.B = telusko.dsl.A;
 //
 //
-//        System.out.println("Array telusko.A = " + telusko.A[0]);
+//        System.out.println("Array telusko.dsl.A = " + telusko.dsl.A[0]);
 
 
         char grade = 'C';

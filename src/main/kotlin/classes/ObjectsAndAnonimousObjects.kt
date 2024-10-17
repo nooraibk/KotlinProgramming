@@ -1,4 +1,4 @@
-package oop
+package classes
 
 fun main(){
     println(A.num)
@@ -17,11 +17,11 @@ interface inter{
     val B: Int
 }
 
-object B: inter{
+object B: inter {
 
     val p = 20
     fun test(){
-        println("Hello from Object telusko.B")
+        println("Hello from Object telusko.dsl.B")
     }
 
     override val A: Int

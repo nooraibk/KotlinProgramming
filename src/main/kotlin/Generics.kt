@@ -57,7 +57,7 @@ class IJK<T>(var param1: T){
     fun getIJK(): T = param1
 }
 
-//another exact same class but with different generic reference, you can also use any other letter instead of T or K
+//another exact same class but with different generic reference, you can also use any other letter instead of T or dsl.K
 
 class PQR<K>(var param1: K){
     fun setIJK(i: K){

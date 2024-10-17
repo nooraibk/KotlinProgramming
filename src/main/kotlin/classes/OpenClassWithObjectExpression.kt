@@ -1,4 +1,4 @@
-package oop
+package classes
 
 fun main(){
     val obj = object: ExtendableOpenClass("Passing First Arguments"){

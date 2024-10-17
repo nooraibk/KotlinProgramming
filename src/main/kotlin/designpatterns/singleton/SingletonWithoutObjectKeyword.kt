@@ -1,4 +1,4 @@
-
+package designpatterns.singleton
 //Singleton pattern restricts multiple object initialization of a class.
 
 class Manager private constructor(){ //making the constructor private disables the initialization of the class however we can create a static/companion to create method to get the instance of the class.

@@ -1,4 +1,4 @@
-package oop
+package classes
 
 
 fun main(){
@@ -27,9 +27,9 @@ data class DataClasses(
     val name: String,
     val age: Int
 ){
-    constructor(
+    /*constructor(
         val xyx : String
-    ) : this()
+    ) : this()*/
 }
 
 /**The compiler automatically derives the following member functions from all properties declared in the primary constructor:

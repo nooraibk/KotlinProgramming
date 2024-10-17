@@ -1,4 +1,4 @@
-package oop
+package designpatterns.delegation
 
 import kotlin.reflect.KProperty
 
@@ -26,13 +26,13 @@ interface Player{
     fun stop()
 }
 
-class FileDownloader(private val file: String): Downloader{
+class FileDownloader(private val file: String): Downloader {
     override fun download() {
         println("$file Downloaded")
     }
 }
 
-class FilePlayer(private val file: String): Player{
+class FilePlayer(private val file: String): Player {
     override fun play() {
         println("$file Playing")
     }
@@ -86,7 +86,7 @@ class MediaFile(private val downloader: Downloader, private val player: Player):
  *
  * class MyClass: SomeInterface by SomeImplementation, SomeOtherInterface
  *
- * This code is saying: 'I am class MyClass and I offer functions of interface SomeInterface which are provided by SomeImplementation. I'll implement SomeOtherInterface by myself (that's implicit, so no by there).'
+ * This code is saying: 'dsl.I am class MyClass and dsl.I offer functions of interface SomeInterface which are provided by SomeImplementation. dsl.I'll implement SomeOtherInterface by myself (that's implicit, so no by there).'
  *
  * ref: https://stackoverflow.com/questions/38250022/what-does-by-keyword-do-in-kotlin
  */

@@ -1,5 +1,7 @@
 package functions
 
+import dsl.B
+
 fun main(){
     println("Hello World".formattedString() + "\n******************************************")
 
@@ -14,6 +16,26 @@ fun main(){
 
     obj.addSkills(obj)
     obj.showSkill()
+
+
+
+    // Extension function add defined for dsl.A
+    fun dsl.A.add():Int{
+        return a+b
+    }
+
+    // Extension function operate defined for dsl.B
+    fun B.operate():Int{
+        return a*b;
+    }
+
+    // Function to display static dispatch
+    fun display(a: dsl.A){
+        print(a.add())
+    }
+
+    // Calling display function
+    display(B())
 }
 
 
@@ -45,3 +67,12 @@ fun Profession.addSkills(obj: Profession): String{
     skill = "Programmer" + " & " + obj.skill
     return skill
 }
+
+
+// Open class created to be inherited
+open class A(val a:Int, val b:Int){
+    val ans = 0
+}
+
+// Class dsl.B inherits dsl.A
+class B : A(5, 5)
