@@ -1,8 +1,6 @@
 package functions
 
-import dsl.B
-
-fun main(){
+fun main() {
     println("Hello World".formattedString() + "\n******************************************")
 
     var a = 23
@@ -20,22 +18,25 @@ fun main(){
 
 
     // Extension function add defined for dsl.A
-    fun dsl.A.add():Int{
-        return a+b
+    fun A.add(): Int {
+        return a + b
     }
 
     // Extension function operate defined for dsl.B
-    fun B.operate():Int{
-        return a*b;
+    fun B.operate(): Int {
+        return a * b;
     }
 
     // Function to display static dispatch
-    fun display(a: dsl.A){
+    fun display(a: A) {
         print(a.add())
     }
 
     // Calling display function
     display(B())
+
+    val box = BoxImplShape(2.0, 2.0)
+    box.printArea()
 }
 
 
@@ -46,33 +47,48 @@ fun main(){
  *
  * *new explanation*::
  * adding function to an existing class without modifying it
-*/
-fun String.formattedString(): String{
+ */
+fun String.formattedString(): String {
     return "-------------\n$this"
 }
 
 //String class is used because it was called after a string
 
 
-fun Int.numberToStringAndLength(): String = "The Number= " + this.toString() + " While its Digit Length= " + this.toString().length
+fun Int.numberToStringAndLength(): String =
+    "The Number= " + this.toString() + " While its Digit Length= " + this.toString().length
 
 
-class Profession{
+class Profession {
     lateinit var skill: String
 
     fun showSkill() = println(skill)
 }
 
-fun Profession.addSkills(obj: Profession): String{
+fun Profession.addSkills(obj: Profession): String {
     skill = "Programmer" + " & " + obj.skill
     return skill
 }
 
 
 // Open class created to be inherited
-open class A(val a:Int, val b:Int){
+open class A(val a: Int, val b: Int) {
     val ans = 0
 }
 
-// Class dsl.B inherits dsl.A
+// Class B inherits dsl.A
 class B : A(5, 5)
+
+interface Shape {
+    fun area(): Double
+}
+
+fun Shape.printArea() {
+    println("Area: ${this.area()}")
+}
+
+class BoxImplShape(private val length: Double, private val width: Double) : Shape {
+    override fun area(): Double {
+        return length * width
+    }
+}
