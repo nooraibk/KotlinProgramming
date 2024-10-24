@@ -29,4 +29,12 @@ class AnotherMath(private var varOne : Int) {
     }
 
     operator fun unaryPlus() : Int = ++varOne
+
+    override fun equals(other: Any?): Boolean {
+        return super.equals(other)
+    }
+
+    override operator fun equals(other: Any?): Boolean {
+        return super.equals(other)
+    }
 }
