@@ -1,5 +1,7 @@
 package functions
 
+import kotlin.math.roundToInt
+
 fun main() {
     val obj = Math()
 
@@ -8,6 +10,8 @@ fun main() {
 
     println(AnotherMath(10) - 4)
     println(+AnotherMath(10))
+
+    println(BBImpl() + 3)
 }
 
 /**
@@ -23,18 +27,28 @@ operator fun Math.plus(a: Int): Int {
 
 class Math
 
-class AnotherMath(private var varOne : Int) {
-    infix operator fun minus(a: Int): Int {
+class AnotherMath(var varOne: Int) {
+    operator fun minus(a: Int): Int {
         return varOne - a
+    }
+
+    operator fun minus(other: AnotherMath) : AnotherMath {
+        return AnotherMath(varOne = -other.varOne)
     }
 
     operator fun unaryPlus() : Int = ++varOne
 
-    override fun equals(other: Any?): Boolean {
-        return super.equals(other)
-    }
-
-    override operator fun equals(other: Any?): Boolean {
-        return super.equals(other)
+    operator fun plus(a : Double) : Int {
+        return a.roundToInt()
     }
 }
+
+//we can also do operator overloading with interfaces
+
+interface BB{
+    operator fun plus(a : Int) : Int{
+        return 10 + a
+    }
+}
+
+class BBImpl : BB
