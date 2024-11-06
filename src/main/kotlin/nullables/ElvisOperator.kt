@@ -10,21 +10,10 @@ fun main(){
      * If variable st found as not null then its property will use otherwise use some other non-null value.
      */
 
-    var st: String? = null
-    var st1: String? = "Hello World"
-    var len1:  Int = if (st != null) st.length else -1
-    var len2:  Int = if (st1 != null) st1.length else -1
-    println("Length of st is ${len1}")
-    println("Length of st1 is ${len2}")
+//    var str: String? = null
+    var str: String? = "Str String"
 
+    val valueOfStr = str?:"Hello World"
 
-    //same above code can be written with Elvis operator as
-
-    var str: String? = null
-    var str1: String? = "Hello World"
-    var leng1:  Int = str ?.length ?: -1 //use of elvis operator
-    var leng2:  Int = str1 ?.length ?:  -1
-
-    println("Length of st is ${leng1}")
-    println("Length of st1 is ${leng2}")
+    println("Value of str is ${valueOfStr}")
 }

@@ -32,7 +32,7 @@ fun main() {
     println(str1 === str2) // true (different object reference)
 
     /**
-     *  true can be explained by the concept of Primitive Caching.
+     *  here true can be explained by the concept of Primitive Caching.
 
     In Kotlin (and Java), primitive types are stored in memory. When you create a primitive variable, Kotlin checks if an identical variable already exists in the memory. If it does, it reuses that reference instead of creating a new one. //search more
 
