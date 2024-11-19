@@ -64,6 +64,8 @@ fun main(){
     //or
     println(comboSecondFunction(ArithmeticOps.ADD)(2, 2))
 
+    lambdaValueToVariable { "Hello Kotlin" }
+
 }
 
 // the below function accept three arguments and return and Int type. first two arguments are simple Int type and the third one is a lambda. this lambda declaration is exactly same as above fun4() and fun5() where we explicitly declared lambda type
@@ -80,4 +82,9 @@ fun comboSecondFunction(operation : ArithmeticOps) : (Int, Int) -> Int{
         ArithmeticOps.MULTIPLY -> {a , b -> (a * b)}
         ArithmeticOps.DIVIDE -> { a, b -> (a / b)}
     }
+}
+
+fun lambdaValueToVariable(message: () -> String){
+    val msg = message()
+    println(msg)
 }

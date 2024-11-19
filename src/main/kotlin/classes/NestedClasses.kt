@@ -9,7 +9,11 @@ fun main() {
 class Outer {
     private val bar: Int = 1
     class Nested {
-        fun foo() = 2
+        fun foo() = bar
+    }
+
+    inner class NestedInner {
+        fun foo() = bar
     }
 }
 

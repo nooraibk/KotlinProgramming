@@ -11,7 +11,7 @@ package functions
 
 fun main(){
     val config = Config()
-//    config.get() //this is how normally we call a function in any class
+    config.get() //this is how normally we call a function in any class
 
     val greeter = Greeter("Hello")
     greeter("World")

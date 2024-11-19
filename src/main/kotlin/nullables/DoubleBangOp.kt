@@ -1,5 +1,6 @@
 package nullables
 
+//not-null assertion operator, also known as double bang operator
 fun main(){
 
     //try commenting and uncommenting both scenarios
