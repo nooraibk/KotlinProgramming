@@ -1,3 +1,5 @@
+package functions
+
 /**
  * invoke lets an instance of a class have a default function
  * invoke is an operator function.

@@ -1,6 +1,4 @@
-package functions
-
-import dsl.B
+package functions.extensions
 
 fun main(){
     println("Hello World".formattedString() + "\n******************************************")
@@ -18,9 +16,8 @@ fun main(){
     obj.showSkill()
 
 
-
     // Extension function add defined for dsl.A
-    fun dsl.A.add():Int{
+    fun A.add():Int{
         return a+b
     }
 
@@ -30,7 +27,7 @@ fun main(){
     }
 
     // Function to display static dispatch
-    fun display(a: dsl.A){
+    fun display(a: A){
         print(a.add())
     }
 

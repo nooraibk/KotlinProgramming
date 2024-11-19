@@ -1,4 +1,4 @@
-package dsl
+package functions.extensions
 
 fun main() {
     val industry = Industry(

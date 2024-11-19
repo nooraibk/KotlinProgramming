@@ -1,10 +1,19 @@
 package functions
 
+//also check invoke.kt
+
 fun main(){
     val obj = Math()
 
     //println(obj.plus(5))
     println(obj + 5)
+
+
+    println("*************************")
+
+    val objComponentsClass = ForComponentOperatorFunction()
+
+    println("Name = ${objComponentsClass.component1()} Id = ${objComponentsClass.component2()}")
 }
 
 /**
@@ -19,3 +28,15 @@ operator fun Math.plus(a : Int) :Int{
 }
 
 class Math
+
+class ForComponentOperatorFunction{
+    val name : String = "John"
+    val id : Int = 133
+
+    /**
+     * operator fun componentN (where N is the number of total properties) is automatically generated for types that supports destructuring declarations (data classes, pairs, triples, maps etc.) and can be manually overridden in simple classes
+     * */
+    operator fun component1() = name
+    operator fun component2() = id
+
+}

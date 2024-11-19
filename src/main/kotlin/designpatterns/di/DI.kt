@@ -1,4 +1,4 @@
-package di
+package designpatterns.di
 
 fun main(){
     val obj = BillingClass()
