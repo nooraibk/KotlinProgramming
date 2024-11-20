@@ -1,3 +1,4 @@
+/*
 import android.os.Parcel
 import android.os.Parcelable
 
@@ -44,3 +45,4 @@ startActivity(intent)
 
 // Receiving data
 val student = intent.getParcelableExtra<ParcelableImplClass>("parcelable_key")
+*/

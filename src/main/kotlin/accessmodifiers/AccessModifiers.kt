@@ -19,7 +19,7 @@ private val test2 = 2
 
 internal val test3 = 3
 
-protected val test4 = 3 //not available to top level declaration
+//protected val test4 = 3 //not available to top level declaration
 
 fun main() {
     test2
@@ -35,13 +35,13 @@ open class TestClass{
 
     class NestedTestClass{
         fun abc(){
-            test4
+//            test4
         }
     }
 }
 
 class InheritingTestClass{
     fun classFun(){
-        println(test4) // cannot access as protected by "protected" keyword
+//        println(test4) // cannot access as protected by "protected" keyword
     }
 }
