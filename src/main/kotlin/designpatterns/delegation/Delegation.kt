@@ -10,11 +10,6 @@ fun main(){
     mediaFile.download()
     mediaFile.play()
     mediaFile.stop()
-
-
-    //pending
-    val testVar by test()
-    println(testVar)
 }
 
 interface Downloader{
@@ -41,15 +36,6 @@ class FilePlayer(private val file: String): Player {
         println("$file Stopped")
     }
 }
-
-
-//pending
-class Test {
-    operator fun getValue(a: Int?, b: KProperty<*>): Int? {
-        return 3
-    }
-}
-fun test() = Test()
 
 //this is a conventional way of writing delegation pattern however kotlin supports it natively
 //class MediaFile(private val downloader: Downloader, private val player: Player): Downloader, Player{

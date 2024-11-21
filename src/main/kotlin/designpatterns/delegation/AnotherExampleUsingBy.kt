@@ -17,3 +17,6 @@ class BaseImpl : Base {
 }
 
 class DelegateBase(base : Base) : Base by base
+
+// or
+//class DelegateBase : Base by BaseImpl()
