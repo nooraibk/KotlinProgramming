@@ -1,3 +1,5 @@
+package generics
+
 fun main(){
 
     val obj1 = ABC(4)

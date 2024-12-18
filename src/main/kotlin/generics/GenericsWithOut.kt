@@ -1,3 +1,5 @@
+package generics
+
 fun main(){
 
 }
