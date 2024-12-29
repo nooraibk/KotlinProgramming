@@ -4,6 +4,7 @@ fun main() {
     val sum = 2 + genericFun(9)
     println("sum of generic = $sum")
     ///////////////////////////////////
+    println("string of generic = ${genericFun("alpha")}")
 
 }
 
