@@ -38,7 +38,7 @@ fun updateData(newData: String) {
 fun undo() {
     if (!backupStack.empty()) {
         // Pop the top state from the stack and restore it
-        val backupData = backupStack.pop()
+        backupStack.pop()
         // Update the actual data with the restored backup
         // ...
     }

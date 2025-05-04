@@ -29,7 +29,7 @@ fun main(){
 
     //as you can see the return type of lambda by pressing CTRL+SHIFT+P on curly brackets, you can also explicitly use the same type while declaring the variable in which you want to save the lambda. for example the below lambda can be explicitly called
 
-    val fun3 = {x: Int -> x*x}
+    {x: Int -> x*x}
 
     //as
 

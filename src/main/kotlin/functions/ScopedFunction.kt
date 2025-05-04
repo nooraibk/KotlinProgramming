@@ -79,7 +79,7 @@ fun main() {
 
 
     nullCheck?.let {
-        val number = it + 1
+        it + 1
 
         /**
          * first the block will only get executed if the nullCheck is null. question mark operator ? does this job.
@@ -92,13 +92,13 @@ fun main() {
 
 
     //we can also write above let as
-    val number = nullCheck?.let {
+    nullCheck?.let {
         it + 1
     }
 
 
 
-    println("--------------------RUN ENDS-----------------------------------")
+    println("--------------------Let ENDS-----------------------------------")
 //---------------------RUN----------------------------------------
 
     val objRun = Square(

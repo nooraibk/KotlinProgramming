@@ -27,7 +27,7 @@ class UserClass{
     var title = "User Class"
 }
 
-class SecondUserClass constructor(var id: Int, val title: String) //constructor keyword is optional and can be omitted unless you are using annotation of visible modifier
+class SecondUserClass(var id: Int, val title: String) //constructor keyword is optional and can be omitted unless you are using annotation of visible modifier
 
 
 //Much like regular properties, properties declared in the primary constructor can be mutable (var) or read-only (val).

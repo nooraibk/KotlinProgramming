@@ -23,7 +23,7 @@ fun main(){
 
     // Extension function operate defined for dsl.B
     fun B.operate():Int{
-        return a*b;
+        return a*b
     }
 
     // Function to display static dispatch

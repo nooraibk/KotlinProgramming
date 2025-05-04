@@ -11,7 +11,7 @@ fun main() {
     println("Type of Vehicle = ${car.type}")
     println("Number of Tyres = ${car.pubNumberOfStudents}")
 
-    val initExample = InitExample("   ", 30)
+    InitExample("   ", 30)
 }
 
 class User{
@@ -66,10 +66,6 @@ open class Vehicle(name: String, modelNumber: String, color: String) {
 
 class Car(val name: String, val modelNumber: String, val color: String) : Vehicle(name, modelNumber, color) {
 
-    override fun drive() {
-        super.drive()
-    }
-
     fun visitPlaces() {
         println("Let's visit places in our new car. We have ${super.numberOfSeat} seats")
     }
@@ -91,10 +87,6 @@ open class VehicleTwo(name: String, modelNumber: String, color: String) {
 class CarTwo : VehicleTwo {
 
     constructor(name: String, modelNumber: String, color: String) : super(name, modelNumber, color)
-
-    override fun drive() {
-        super.drive()
-    }
 
     fun visitPlaces() {
         println("Let's visit places in our new car. We have ${super.numberOfSeat} seats")

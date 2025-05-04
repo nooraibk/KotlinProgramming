@@ -2,8 +2,7 @@ package oop
 
 fun main(){
     val obj2 = InterfaceClass()
-    val obj3 = ImplementationClass()
-    val obj4 : InterfaceClass.MInterface
+    ImplementationClass()
 
     obj2.callInterfaceFunction() //compile time error because lateinit var obj1 inside InterfaceClass class is not been initialized. uncommenting line 16 does compile it
 }

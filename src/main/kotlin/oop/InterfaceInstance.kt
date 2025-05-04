@@ -1,7 +1,7 @@
 package oop
 
 fun main(){
-    val obj1 = InterfaceInstanceClass()
+    InterfaceInstanceClass()
     val obj2 = InheritanceClass()
 
 //    obj1.interfaceInstanceClassFunction("Interface Class Argument")

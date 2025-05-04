@@ -1,10 +1,10 @@
 package classes
 
 fun main() {
-    val demo = MyOuterClass().Inner().foo() // == 1
+    MyOuterClass().Inner().foo() // == 1
 //    val demo = MyOuterClass.Inner().foo() // == 1
     //not providing constructor declaration gives error:: Constructor of inner class Inner can be called only with receiver of containing class
-    val outerObj = MyOuterClass()
+    MyOuterClass()
 //    outerObj.innerVariable //outer class cannot access inner class members directly
 
 }

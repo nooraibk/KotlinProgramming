@@ -44,5 +44,5 @@ fun main(){
 
     //* # All the above array are object arrays like Integer[] and String[]. To create primitive arrays you have to call primitive array functions of kotlin instead of .array()
 
-    val primitiveArrInt = intArrayOf(4, 4, 5)
+    intArrayOf(4, 4, 5)
 }

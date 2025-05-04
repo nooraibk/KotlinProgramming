@@ -17,7 +17,7 @@ interface InterfaceA {
         println("ShowA")
     }
 
-    open fun showABC(){
+    fun showABC(){
         println("ShowABC dsl.A")
     }
 }
@@ -28,7 +28,7 @@ interface InterfaceB {
         println("ShowB")
     }
 
-    open fun showABC(){
+    fun showABC(){
         println("ShowABC dsl.B")
     }
 }

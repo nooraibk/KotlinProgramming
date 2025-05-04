@@ -10,8 +10,7 @@ fun main() {
     val sum : MyLambda = { x, y -> x+y }
     println("Sum of 2 and 2 will be ${sum(2, 2)}")
 
-    var myInterface : MyInterface? = null
-    var myEnum : MyEnum = MyEnum.CASE1
+    MyEnum.CASE1
     val innerString : MyInnerClass = MyOuterClass().MyInnerClass()
     println("inner String = ${innerString.str}")
 }

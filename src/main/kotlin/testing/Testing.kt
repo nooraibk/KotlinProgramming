@@ -22,7 +22,7 @@ class Extensionss : Testing, TestingONe {
     val twoClass = oneClass
     override fun abc() {
         val x = ABC(0, 1) + ABC(2, 3)
-        val (l, y) = oneClass
+        val (_, _) = oneClass
         println("tag-->$x")
         super<Testing>.abc()
         super<TestingONe>.abc()
@@ -61,8 +61,8 @@ data class ABC(
 
 class ABX(
     val a: Int = 0
-) {
-}
+)
+
 //}
 //class Utils {
 object MYCLADD {
@@ -95,9 +95,7 @@ fun main() {
         return@higherOrderFunction
     }
 
-    val vadd = arrayOf("323", 4323)
-
-    var dd : Int = 9
+    arrayOf("323", 4323)
 
     if (MYCLADD.abc != null){
         println("abccc")
