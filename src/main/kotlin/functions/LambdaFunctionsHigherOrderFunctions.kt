@@ -24,12 +24,12 @@ fun main(){
 
     fun2() //this will run lambda body
 
-    println(fun2()) //this will run lambda body and also print the return value
+//    println(fun2()) //this will run lambda body and also print the return value
 
 
     //as you can see the return type of lambda by pressing CTRL+SHIFT+P on curly brackets, you can also explicitly use the same type while declaring the variable in which you want to save the lambda. for example the below lambda can be explicitly called
 
-    {x: Int -> x*x}
+//    {x: Int -> x*x}
 
     //as
 
